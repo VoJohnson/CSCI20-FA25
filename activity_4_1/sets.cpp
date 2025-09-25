@@ -7,17 +7,30 @@ int main() {
 
     std::array<int, 10> A = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100}; // Array of integers with a size of 10.
 
-        std::printf("A:%d\n", A.at(0)); // Print first element of array in order as "0, 1, 2, 3, etc..."
+        std::printf("A: %i\n", A.at(0)); // Print first element of array in order as "0, 1, 2, 3, etc..."
 
-    std::array<char, 5> B = {'a', 'b', 'c', 'd', 'e'}; // Array of characters with a size of 5.
+    std::array<char, 5> B = {'A', 'B', 'C', 'D', 'E'}; // Array of characters with a size of 5.
 
-        std::printf("B:%c\n", B.at(0)); // Print first element of array in order as "0, 1, 2, 3, etc..."
+        std::printf("B: %c\n", B.at(0)); // Print first element of array in order as "0, 1, 2, 3, etc..."
 
-    std::array<std::string, 2> D = {"whats", "up"}; // string of words with a size of 2.
+    std::array<std::string, 2> C = {"Hi", "Hello"}; // string of words with a size of 2.
 
-        std::printf("%s\n", D.at(0).c_str()); // print the first word of the string using operator
+        std::printf("C: %s\n", C.at(0).c_str()); // print the first word of the string using operator
 
-    std::vector
+    std::vector<int> D = {1, 2, 3}; // vector of integers
+    D[1]=0;
+
+        std::printf("D: %i\n", D.at(0));
+
+    std::vector<std::string> E = {"I", "Love", "Food"};
+    E[1]="E";
+
+        std::printf("E: %s\n", E.at(0).c_str());
+
+    std::vector<char> F = {'A', 'B', 'C'};
+    F[1]=0;
+
+        std::printf("F: %c\n", F.at(0));
 
     return 0;
 }
