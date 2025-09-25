@@ -18,19 +18,16 @@ int main() {
         std::printf("C: %s\n", C.at(0).c_str()); // print the first word of the string using operator
 
     std::vector<int> D = {1, 2, 3}; // vector of integers
-    D[1]=0;
 
-        std::printf("D: %i\n", D.at(0));
+        std::printf("D: %i\n", D.front()); // Print first element of vector 
 
-    std::vector<std::string> E = {"I", "Love", "Food"};
-    E[1]="E";
+    std::vector<std::string> E = {"I", "Love", "Food"}; // Vector string of characters
 
-        std::printf("E: %s\n", E.at(0).c_str());
+        std::printf("E: %s\n", E.front().c_str()); // Print first element
 
-    std::vector<char> F = {'A', 'B', 'C'};
-    F[1]=0;
+    std::vector<char> F = {'A', 'B', 'C'}; // Vector of characters
 
-        std::printf("F: %c\n", F.at(0));
+        std::printf("F: %c\n", F.front()); // Print first element of chracters
 
     return 0;
 }
