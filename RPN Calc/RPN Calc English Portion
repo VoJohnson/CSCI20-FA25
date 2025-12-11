@@ -1,0 +1,32 @@
+My code initially begins with #include “Header.hpp” as my header. This header
+includes various preprocessor directives such as iostream, cstdio, vector,
+string and sstream. It also includes declared namespaces such as “using
+std::vector” and “using std::printf” which is a shortcut for writing vectors and
+printf. Afterwards I being my code with int main() which builds my main
+function that I want my code to be. Inside my of main I build my stacks. I build
+two stacks, one for numbers and one for the Arithmetic symbols. These stacks
+are under the symbols “l” and “I”. Next comes my manually filled function.
+This is a stack of integers that are built ahead of time for the code to calculate.
+The stack is built in a LIFO organization method where the last item is the first
+item out. Because of this I use “.push_back” to build my stack by creating a
+set of integers and continuously pushing by the numbers in the order as to
+which I want my code to pull out the numbers to then create the function that
+it will calculate. By this logic the current function pre filled into the stack
+would be ((((4-3)+3)*4)/4) which in turn would result in the answer being 4.
+After this I declare my operators. I use “while” alongside with “empty” to track
+the amount of operators in my stack in this case being my Arithmetic symbols.
+If the code sees the symbols then it will use the designated symbol on the
+function in the order that the stack is built. I created multiple scenarios for my
+code so It can detect most of the basic Arithmetic symbols. I started with
+multiplication by beginning my code with “if” what “if” does is that since it is
+used alongside “while” the code with detect the if there is the symbol for
+Multiplication in my stack, then it will use multiplication with 2 integers in the
+stack. I declare the 2 integers as ‘a’ and ‘b’ and proceed to pop them and then
+have the code perform Multiplication. I proceed to repeat this step multiple
+times for Addition, Subtraction and Division. After this I then use the “if”
+command again to track the amount of numbers in my stack of numbers.
+Once the code has run out of numbers it will proceed to pop out the last
+number that was left in the stack. I use printf to print out the result which is
+built as “Result: (Last number in Stack)” which I will state again would result
+with an answer of 4. Lastly. I use “return 0” to turn off my function once it has
+completed its task in calculating.
