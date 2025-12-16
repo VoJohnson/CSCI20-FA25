@@ -63,6 +63,7 @@ private:
     int multiplication(int, int);
     int division(int, int);
 public:
+// Calc() 
     struct stuff {
         int trash;
         char plastic;
@@ -73,8 +74,7 @@ public:
     };
     // tool function
     vector<thing> map(vector<stuff>);
-    Calc(); // initializes values
 
     // loads the stack
-    void machine(vector<stuff>); // loads stack with values
+    void machine(vector<stuff>); 
 };

@@ -13,7 +13,7 @@ int main() {
     load_eq.push_back(y);
     load_eq.push_back(z);
 
-    calc.map(load_eq);
+    calc.machine(load_eq);
 
     return 0;
 }
@@ -27,11 +27,10 @@ vector<Calc::thing> Calc::map(vector<Calc::stuff> x) {
     vector<Calc::thing> ret= {};
     for(int i=0;i<x.size();i=i+1) {
         // the set in the case of x.size = 3 i s[i-0,i=1,i=2, TERMINATE]
-        //for each stuff, make a new thing
+        // for each stuff, make a new thing
         thing c(x.at(i).trash, x.at(i).plastic);
         ret.push_back(c);
-        printf("%d, %c", c.num, c.op);
-    };
-
+        printf("%d, %c\n", c.num, c.op);
+    }
     return ret;
 }
