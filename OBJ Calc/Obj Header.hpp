@@ -57,13 +57,13 @@ private:
             op = b;
         }
     };
-    stack<thing> gold;
-    int addition(int, int);
-    int subtraction(int, int);
-    int multiplication(int, int);
-    int division(int, int);
+    stack<thing> waste;
+    int addition(int l, int r)          { return l + r; }
+    int subtraction(int l, int r)       { return l - r; }
+    int multiplication(int l, int r)    { return l * r; }
+    int division(int l, int r)          { return l / r; }
 public:
-// Calc() 
+// Calc(); // initializes values
     struct stuff {
         int trash;
         char plastic;
@@ -77,4 +77,6 @@ public:
 
     // loads the stack
     void machine(vector<stuff>); 
+
+    stack<int> evaluate( stack<int> );
 };
