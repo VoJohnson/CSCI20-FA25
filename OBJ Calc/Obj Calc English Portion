@@ -1,0 +1,6 @@
+ I initiate my code using #include "Obj  Header.hpp".
+ In this header file I have cstdio, stack, and vector. I also have
+ shortcuts which are using vector, stack, and printf to help organize
+ my codespace and shorten it. In my header file I have a written out
+ guide with questions to help organize the process of making an 
+ object calculator. 
