@@ -1,6 +1,62 @@
- I initiate my code using #include "Obj  Header.hpp".
- In this header file I have cstdio, stack, and vector. I also have
- shortcuts which are using vector, stack, and printf to help organize
- my codespace and shorten it. In my header file I have a written out
- guide with questions to help organize the process of making an 
- object calculator. 
+I initiate my code using #include "Obj  Header.hpp".
+In this header file I have cstdio, stack, and vector. I also have
+shortcuts which are using vector, stack, and printf to help organize
+my codespace and shorten it. In my header file I have a written out
+guide with questions to help organize the process of making an 
+object calculator. My first objective was to create my object. 
+I create a private class to keep the data that I want to keep
+hidden from the user. This data is kept within the object and is 
+not accessible from the user and is obfuscated. The first problem that arises 
+is that I needed a way to represent numbers and operations.
+I solve this issue by using a structure that will include the operations of my calculator. 
+This structure houses numbers for evaluation and characters for operations. 
+These operations are represented by the following '+' for addition, '-' for subtraction,
+'*' for multiplication, '/' for division, and 'e' for evaluation which is a fail safe for evaluatable number detection.
+The second problem that occurs are figuring out what basic operations the calculator will use.
+For this calculator I use basic binary operators on which two numbers will be given for 
+(a,b) written as "addition: a+b", "subtraction: a-b". "multiplication: a*b",
+"division: fractionalized a b: a/b", and "evaluation: symbolizes number for evaluation, 
+termination operation". My next problem is deciding how my structure defines 
+the equations integrity while preserving order. This problem gets solved by 
+using a stack<dicho> st. The stack of type dicho b/c dicho assists in evaluation 
+operation encoding. The next step after this is figuring out how to load the stack 
+in proper order. This problem has multiple problems encoded in it. The main sub problem 
+is that we need to get the data from the user which implys that we need a how and where the 
+data will be obtained. This problem gets solved by using a combination of constructors 
+and functions within my code and by using a map. I write out my object beginning 
+with the private portion. I named by object "Calc" with a private structure under 
+the name "thing" and a public structure under the name "stuff". Within the private 
+structure I define what integers my calculator will take in order to perform operations.
+For my calculator I have it designed to take both integers and numbers.
+These are defined as num, and op. The "thing" will then using the integer and character
+to perform the operations. I then design how the numbers that would be taken in 
+my calculator would be defined within the operation. I define my operations, 
+addition, subtraction, multiplication, and division. I then move onto designing 
+my public section. In public section named "stuff" I create a similar design as my 
+private. I create a structure that will hold the operations and numbers. I then create 
+a stack of type "thing" to hold the operations and numbers in order. I then create
+my "tool function" to allow my public to access my private data. This function is
+named "map". This function will take in a character and an integer from the user which
+the user knows code reads as stuff but then will translate the stuff into the private
+thing. This function will then push the translated data into the stack of type "thing".
+This function will then return the stack of type "thing" to be used in evaluation.
+I then have "void machine(vector<stuff>)" which will take in a vector of stuff
+and load the stack. I finish it off with a stack named "evaluate" which is meant
+to be the stack that I use to perform the operations. 
+Now I can move onto my .cpp file. In my cpp file I begin by including
+my header file. I begin with my int main which includes a vector of stuff
+that will load the stack into the "machine". My "machine" which is the name of my function that is meant
+to convert the numbers and operations and is used to create the stack. I create a for loop
+to go through the vector of stuff that is given to the function. I then push the
+converted stuff into the stack of type "thing". This allows the public to access
+private and and define the input of the operations. I then have another map function
+that will convert the stuff into thing. This function will take in a character and an integer
+and will return a thing that is pushed into the stack. This function allows the public
+to access the private data and I again create another for loop which will take a stuff and create a new thing.
+I then create a printf which will take the ending data and print it out to the user. Using 
+the num and op. I then finish off my code with the calculator assignment that was created
+previously as to which the whole code does not work. I believe this to be as I am lost
+as to which and where the operations are meant to be performed. I believe that I need to
+create another function that will take in the stack of type "thing" and perform the operations
+in order. But I am unsure as to how to do this while also using the previously created
+calculator assignment.
